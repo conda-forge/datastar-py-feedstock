@@ -1,5 +1,5 @@
 {% set name = "datastar-py" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/datastar_py-{{ version }}.tar.gz
-  sha256: 59c01f5bc39b3d2434824d752b48bdf4414fb0a38804151b88e868f43348728e
+  sha256: efd319c1434e410a768bc665f099075b5bf81b63803204708e769c5af3c618a9
 
 build:
   noarch: python
@@ -21,6 +21,11 @@ requirements:
     - hatchling
     - pip
   run:
+    - django
+    - fastapi
+    - quart
+    - sanic
+    - starlette
     - python >={{ python_min }},<4.0
 
 test:
