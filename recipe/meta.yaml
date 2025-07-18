@@ -1,5 +1,5 @@
 {% set name = "datastar-py" %}
-{% set version = "0.6.2" %}
+{% set version = "0.6.3" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/datastar_py-{{ version }}.tar.gz
-  sha256: 9bfcd2efd82f04235275a5ee0827a7263035dcbf13ffdbf0d2e997d43d61f655
+  sha256: a8818d325081d8b362149a0c341952aaa97b68da30df28936f4e690962870529
 
 build:
   noarch: python
