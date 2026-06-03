@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: datastar-py
-  version: 1.0.0
+  version: 1.0.2
   python_min: '3.11'
 
 package:
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/datastar_py-${{ version }}.tar.gz
-  sha256: ca8b4d464c1177f8f0b2c3e3b25b3ee6c9b391793907dd1ad2fce73859ce1fb8
+  sha256: c6f86e2b48c3a5ea08570a4e958267307a5ffc0253c259f054dc3bb6de8a2c0e
 
 build:
   number: 0
@@ -26,6 +26,11 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }},<4.0
+    - fastapi
+    - sanic
+    - starlette
+    - quart
+    - django
 tests:
   - python:
       imports:
